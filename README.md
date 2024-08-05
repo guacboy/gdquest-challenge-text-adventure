@@ -17,8 +17,7 @@ To import the demo into the project manager:
 <li>
   Clone this repository (or
   <a href="https://github.com/guacboy/gdquest-challenge-text-adventure/archive/refs/heads/main.zip">
-    download
-  </a>
+    download</a>
   a ZIP archive)
 </li>
 <ul>
