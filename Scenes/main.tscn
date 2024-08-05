@@ -1,0 +1,246 @@
+[gd_scene load_steps=26 format=3 uid="uid://cxa3s461j63x8"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_fprog"]
+[ext_resource type="Theme" uid="uid://bspxivjtyl334" path="res://Themes/main_theme.tres" id="1_lqlpb"]
+[ext_resource type="Script" path="res://Scripts/dialogue_choice.gd" id="3_c6gm4"]
+[ext_resource type="Script" path="res://Scripts/dialogue_text.gd" id="3_wiext"]
+[ext_resource type="Script" path="res://Scripts/dialogue_prompt.gd" id="4_x8bpa"]
+[ext_resource type="Texture2D" uid="uid://bquhhtbsfflcl" path="res://Assets/Health and Points Bars/Sprites/Heart Bar/Heart Stage 1.png" id="6_k16m4"]
+[ext_resource type="Texture2D" uid="uid://c7xr3ydo020gy" path="res://Assets/Health and Points Bars/Sprites/Energy Bar/Energy Stage 1.png" id="7_twi6c"]
+[ext_resource type="Texture2D" uid="uid://do2hxgrk26ks4" path="res://Assets/Health and Points Bars/Sprites/Diamond Bar/Diamond Stage 1.png" id="8_dii7d"]
+[ext_resource type="PackedScene" uid="uid://cfc5m0d5v7ca2" path="res://Scenes/scene_display.tscn" id="9_2dxi5"]
+[ext_resource type="PackedScene" uid="uid://cj2rkoyqpjg0i" path="res://Scenes/player.tscn" id="10_f1efm"]
+
+[sub_resource type="Resource" id="Resource_f367a"]
+script = ExtResource("3_c6gm4")
+dialogue_choice = "This is the first choice."
+is_take_damage = false
+is_give_health = false
+is_give_energy = false
+is_give_money = false
+is_gain_money = false
+amount_given_or_gain = 0
+target_dialogue_idx = 0
+is_next_scene = true
+target_scene_idx = 0
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_dkjub"]
+script = ExtResource("3_wiext")
+dialogue = "This is the first scene."
+dialogue_choice = Array[ExtResource("3_c6gm4")]([SubResource("Resource_f367a")])
+
+[sub_resource type="Resource" id="Resource_dje5n"]
+script = ExtResource("4_x8bpa")
+scene_prompt = ""
+scene = Array[ExtResource("3_wiext")]([SubResource("Resource_dkjub")])
+
+[sub_resource type="Resource" id="Resource_oc7fs"]
+script = ExtResource("3_c6gm4")
+dialogue_choice = "This is the second choice."
+is_take_damage = false
+is_give_health = false
+is_give_energy = false
+is_give_money = false
+is_gain_money = false
+amount_given_or_gain = 0
+target_dialogue_idx = 0
+is_next_scene = true
+target_scene_idx = 0
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_fmmi8"]
+script = ExtResource("3_wiext")
+dialogue = "This is the second scene."
+dialogue_choice = Array[ExtResource("3_c6gm4")]([SubResource("Resource_oc7fs")])
+
+[sub_resource type="Resource" id="Resource_8b36a"]
+script = ExtResource("4_x8bpa")
+scene_prompt = ""
+scene = Array[ExtResource("3_wiext")]([SubResource("Resource_fmmi8")])
+
+[sub_resource type="Resource" id="Resource_rx86x"]
+script = ExtResource("3_c6gm4")
+dialogue_choice = "This is the third choice."
+is_take_damage = false
+is_give_health = false
+is_give_energy = false
+is_give_money = false
+is_gain_money = false
+amount_given_or_gain = 0
+target_dialogue_idx = 0
+is_next_scene = true
+target_scene_idx = 0
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_f5xnh"]
+script = ExtResource("3_wiext")
+dialogue = "This is the third scene."
+dialogue_choice = Array[ExtResource("3_c6gm4")]([SubResource("Resource_rx86x")])
+
+[sub_resource type="Resource" id="Resource_qimum"]
+script = ExtResource("4_x8bpa")
+scene_prompt = ""
+scene = Array[ExtResource("3_wiext")]([SubResource("Resource_f5xnh")])
+
+[sub_resource type="Resource" id="Resource_n8axh"]
+script = ExtResource("3_c6gm4")
+dialogue_choice = "This is the fourth choice."
+is_take_damage = false
+is_give_health = false
+is_give_energy = false
+is_give_money = false
+is_gain_money = false
+amount_given_or_gain = 0
+target_dialogue_idx = 0
+is_next_scene = true
+target_scene_idx = 0
+is_quit = false
+
+[sub_resource type="Resource" id="Resource_qoyl1"]
+script = ExtResource("3_wiext")
+dialogue = "This is the fourth scene."
+dialogue_choice = Array[ExtResource("3_c6gm4")]([SubResource("Resource_n8axh")])
+
+[sub_resource type="Resource" id="Resource_tqny1"]
+script = ExtResource("4_x8bpa")
+scene_prompt = ""
+scene = Array[ExtResource("3_wiext")]([SubResource("Resource_qoyl1")])
+
+[sub_resource type="Resource" id="Resource_135f3"]
+script = ExtResource("3_c6gm4")
+dialogue_choice = "Game over!"
+is_take_damage = false
+is_give_health = false
+is_give_energy = false
+is_give_money = false
+is_gain_money = false
+amount_given_or_gain = 0
+target_dialogue_idx = 0
+is_next_scene = false
+target_scene_idx = 0
+is_quit = true
+
+[sub_resource type="Resource" id="Resource_gdaji"]
+script = ExtResource("3_wiext")
+dialogue = "This is the last scene."
+dialogue_choice = Array[ExtResource("3_c6gm4")]([SubResource("Resource_135f3")])
+
+[sub_resource type="Resource" id="Resource_cqt06"]
+script = ExtResource("4_x8bpa")
+scene_prompt = ""
+scene = Array[ExtResource("3_wiext")]([SubResource("Resource_gdaji")])
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lqlpb")
+script = ExtResource("1_fprog")
+scene_list = Array[ExtResource("4_x8bpa")]([SubResource("Resource_dje5n"), SubResource("Resource_8b36a"), SubResource("Resource_qimum"), SubResource("Resource_tqny1"), SubResource("Resource_cqt06")])
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0646965, 0.0646966, 0.0646965, 1)
+
+[node name="Dialogue" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516667
+anchor_top = 0.044
+anchor_right = 0.973667
+anchor_bottom = 0.951
+offset_top = 0.479996
+offset_right = 0.559937
+offset_bottom = -0.0800781
+metadata/_edit_use_anchors_ = true
+
+[node name="Story" type="RichTextLabel" parent="Dialogue"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_lqlpb")
+bbcode_enabled = true
+text = "test dialogue to display information regarding the game blah blah"
+fit_content = true
+
+[node name="Choices" type="VBoxContainer" parent="Dialogue"]
+layout_mode = 2
+
+[node name="ButtonOne" type="Button" parent="Dialogue/Choices"]
+layout_mode = 2
+text = "button one"
+
+[node name="ButtonTwo" type="Button" parent="Dialogue/Choices"]
+layout_mode = 2
+text = "button two"
+
+[node name="Status" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0255208
+anchor_top = 0.044
+anchor_right = 0.482521
+anchor_bottom = 0.951
+offset_top = 0.479996
+offset_right = 0.559937
+offset_bottom = -0.0800781
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Status"]
+layout_mode = 2
+
+[node name="HealthTexture" type="TextureRect" parent="Status/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_k16m4")
+expand_mode = 2
+
+[node name="Health" type="RichTextLabel" parent="Status/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lqlpb")
+text = "3"
+fit_content = true
+
+[node name="EnergyTexture" type="TextureRect" parent="Status/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("7_twi6c")
+expand_mode = 2
+
+[node name="Energy" type="RichTextLabel" parent="Status/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lqlpb")
+text = "5"
+fit_content = true
+
+[node name="CurrencyTexture" type="TextureRect" parent="Status/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("8_dii7d")
+expand_mode = 2
+
+[node name="Currency" type="RichTextLabel" parent="Status/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lqlpb")
+text = "10"
+fit_content = true
+
+[node name="SceneDisplay" parent="." instance=ExtResource("9_2dxi5")]
+clip_contents = true
+custom_minimum_size = Vector2(69.26, 0)
+offset_left = 49.0
+offset_top = -61.0
+offset_right = 927.0
+offset_bottom = 1028.0
+
+[node name="Player" parent="." instance=ExtResource("10_f1efm")]
+position = Vector2(728, 894)
+scale = Vector2(3.145, 3.145)

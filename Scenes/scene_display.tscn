@@ -1,0 +1,172 @@
+[gd_scene load_steps=13 format=3 uid="uid://cfc5m0d5v7ca2"]
+
+[ext_resource type="Shader" path="res://Shaders/background_scroll.gdshader" id="1_k10jq"]
+[ext_resource type="Texture2D" uid="uid://bwc04qqm4j45e" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="4_u6xfa"]
+[ext_resource type="Texture2D" uid="uid://b7m4yt1450ka6" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png" id="5_81ieu"]
+[ext_resource type="Texture2D" uid="uid://cwuh0nkw4q5v2" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="6_xnrnr"]
+[ext_resource type="Texture2D" uid="uid://b7f3l1mngg37p" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" id="7_ivbc4"]
+[ext_resource type="Texture2D" uid="uid://dah57voyaf1x8" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="8_lym1r"]
+[ext_resource type="Texture2D" uid="uid://mms41jbwryjb" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="9_p67bl"]
+[ext_resource type="Texture2D" uid="uid://db8ng146jq84x" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="10_2v3r2"]
+[ext_resource type="Texture2D" uid="uid://pbttpm6kwuh1" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0007_Lights.png" id="11_l6xjf"]
+[ext_resource type="Texture2D" uid="uid://cy0m7e8ttlubm" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0001_8.png" id="12_vw4ow"]
+[ext_resource type="Texture2D" uid="uid://c6v4uktchxv2d" path="res://Assets/Free Pixel Art Forest/PNG/Background layers/Layer_0000_9.png" id="13_383nw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hvwpt"]
+shader = ExtResource("1_k10jq")
+
+[node name="SceneDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0
+offset_top = -7.0
+offset_right = 38.0
+offset_bottom = 33.0
+
+[node name="Tree" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TreeBottom" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_u6xfa")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TreeSecondBottom" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_81ieu")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TreeMiddle" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_xnrnr")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TreeSecondTop" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_ivbc4")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TreeTop" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_lym1r")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TreeLeaves" type="TextureRect" parent="Tree"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_p67bl")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Light" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LightOne" type="TextureRect" parent="Light"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_2v3r2")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="LightTwo" type="TextureRect" parent="Light"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_l6xjf")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Grass" type="TextureRect" parent="Floor"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_vw4ow")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Dirt" type="TextureRect" parent="Floor"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_hvwpt")
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.225
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_383nw")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true

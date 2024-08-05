@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bspxivjtyl334"]
+
+[ext_resource type="FontFile" uid="uid://b4muoc3p6qmbs" path="res://Assets/Silver.ttf" id="1_dsbx0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvwiw"]
+
+[resource]
+default_font = ExtResource("1_dsbx0")
+default_font_size = 96
+Button/styles/normal = SubResource("StyleBoxFlat_xvwiw")

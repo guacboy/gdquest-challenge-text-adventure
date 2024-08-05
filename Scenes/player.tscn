@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://cj2rkoyqpjg0i"]
+
+[ext_resource type="Texture2D" uid="uid://bap5bk8wdmmu" path="res://Assets/GandalfHardcore Character Asset Pack/Character skin colors/Female Skin1.png" id="1_ic4bu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s31cx"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(22, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v5mw"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(102, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxxdc"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(182, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ura5q"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(262, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsphl"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(342, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idlkc"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(422, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkpsp"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(502, 74, 40, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc0qt"]
+atlas = ExtResource("1_ic4bu")
+region = Rect2(582, 74, 40, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ooco"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s31cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v5mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxxdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ura5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsphl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idlkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkpsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc0qt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[node name="Player" type="Node2D"]
+
+[node name="Body" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1ooco")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.459479
