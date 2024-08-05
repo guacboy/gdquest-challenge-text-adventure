@@ -2,6 +2,12 @@
   GDQuest Challenge: Text Adventure
 </h1>
 This repository serves as a practice project for learning <a href="https://godotengine.org">Godot Engine</a>, following the <a href="https://www.gdquest.com">GDQuest</a> course. It is intended purely for educational purposes and has no plans for further development. Please note that this repository is not affiliated with GDQuest.
+<br>
+<br>
+<b>
+  NOTE:
+</b>
+The project is considered "textbook-complete" but lacks extensive content for a fully engaging experience. However, it includes placeholders and core game mechanics that can be expanded upon for additional content.
 <h2>
   Downloading the Project File
 </h2>
