@@ -34,7 +34,17 @@ To import the demo into the project manager:
   Select the path to the folder containing the project files.
 </li>
 <br>
-and voilà! Project should now appear in the project manager.
+To test the demo:
+<br>
+<br>
+<li>
+  Open <code>res:// > Scenes > main.tscn</code>
+</li>
+<li>
+  Click <code>F6</code> on your keyboard.
+</li>
+<br>
+and voilà! Project should now be playable.
 <h2>
   License and Assets
 </h2>
